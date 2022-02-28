@@ -1,16 +1,17 @@
-import HelperClasses.MyArrays;
+package JavaSolutions;
 
-
-
-class Leetcode1920 {
-    
-    public static void main(String[] args) {
-
+public class Leetcode1920 {
   
-     MyArrays myArrays = new MyArrays();
-
-
-       System.out.println(myArrays.toString());
+  public static int[] buildArray(int[] nums) {
+    int [] myArray = new int[nums.length];
+    
+    for(int i =0; i < nums.length; i++){
+        int element = nums[i];
+        
+        myArray[i] = nums[element];
     }
+    
+    return myArray;
+}
 
 }
