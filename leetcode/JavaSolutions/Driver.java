@@ -1,7 +1,16 @@
+
 public class Driver {
 
     
     public static void main(String[] args) {
+
+   
+
+        
+
+    }
+
+    public void stringTesting(){
         String stringOne = new String("hello World");
         String stringTwo = new String("Hello world");
 
@@ -58,8 +67,6 @@ public class Driver {
         ") Result: " +  stringOne);
 
         System.out.println("endWith: Word: (" + endWith + ") Result: " + stringOne.endsWith(endWith));
-
-
 
     }
 }

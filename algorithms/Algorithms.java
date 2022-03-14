@@ -1,11 +1,17 @@
+import javax.naming.directory.SearchControls;
+import javax.swing.plaf.synth.SynthToolBarUI;
+
 public class Algorithms {
 
     public static void main(String[] args) {
         int[] array = { -1, 3, 4, -5, 9, -2 };
 
-        //maxCrossArray(array, array.length / 2);
-        System.out.println(findSumMaxSubarrayOfSizeK(array, 3));
+        int target = -1;
+        Search search = new Search();
 
+
+        System.out.println(search.recursiveBinarySearch(array, target));
+   
     }
 
     // divide and conquer
