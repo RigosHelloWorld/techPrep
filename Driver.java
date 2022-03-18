@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import algorithms.Search;
-import algorithms.Sorting;
 import algorithms.Algorithms;
 
 
@@ -21,9 +18,7 @@ public class Driver {
 
     }
 
-    public static void changeArray(int[] array){
-        array[0] = 2;
-    }
+
 
     public void stringTesting(){
         String stringOne = new String("hello World");
