@@ -11,6 +11,7 @@ public class Leetcode1920 {
     "and return it A zero-based permutation nums is an array of distinct integers from 0 to nums.length - 1 (inclusive)";
   }
 
+  
   public static int[] buildArray(int[] nums) {
     int [] myArray = new int[nums.length];
     
