@@ -1,7 +1,26 @@
+import algorithms.Algorithms;
+
+
 public class Driver {
 
     
     public static void main(String[] args) {
+
+
+        int[] array = { 11,12,13,14};
+
+        int windowSize = 2;
+   
+        Algorithms algorithms = new Algorithms();
+
+        algorithms.slidingWindow(array, windowSize);
+
+
+    }
+
+
+
+    public void stringTesting(){
         String stringOne = new String("hello World");
         String stringTwo = new String("Hello world");
 
@@ -58,8 +77,6 @@ public class Driver {
         ") Result: " +  stringOne);
 
         System.out.println("endWith: Word: (" + endWith + ") Result: " + stringOne.endsWith(endWith));
-
-
 
     }
 }
