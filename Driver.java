@@ -9,11 +9,14 @@ public class Driver {
 
         int[] array = { 11,12,13,14};
 
+        int[] arr = {1, 2, 3, 4, -2, 2, 7, 8, 9};
         int windowSize = 2;
+        int target = 4;
    
         Algorithms algorithms = new Algorithms();
 
-        algorithms.slidingWindow(array, windowSize);
+       //algorithms.slidingWindow(array, windowSize);
+        algorithms.findNumsAddToTarget(arr,target);
 
 
     }
