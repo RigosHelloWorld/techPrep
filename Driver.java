@@ -1,14 +1,28 @@
+import java.util.Arrays;
+import algorithms.Search;
+import algorithms.Sorting;
+import algorithms.Algorithms;
+
 
 public class Driver {
 
     
     public static void main(String[] args) {
 
-        System.out.println(Leetcode1920.problemStatement());
+
+        int[] array = { 11,12,13,14};
+
+        int windowSize = 2;
    
+        Algorithms algorithms = new Algorithms();
 
-        
+        algorithms.slidingWindow(array, windowSize);
 
+
+    }
+
+    public static void changeArray(int[] array){
+        array[0] = 2;
     }
 
     public void stringTesting(){

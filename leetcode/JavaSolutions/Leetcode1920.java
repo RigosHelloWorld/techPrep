@@ -1,4 +1,5 @@
 
+package leetcode.javaSolutions;
 
 public class Leetcode1920 {
   

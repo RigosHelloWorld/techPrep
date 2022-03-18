@@ -1,18 +1,46 @@
-import javax.naming.directory.SearchControls;
-import javax.swing.plaf.synth.SynthToolBarUI;
+package algorithms;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 
 public class Algorithms {
 
-    public static void main(String[] args) {
-        int[] array = { -1, 3, 4, -5, 9, -2 };
+    private List<List<Integer>> list;
+    //constructor
+    public Algorithms(){
+        list = new ArrayList<>();
+    };
 
-        int target = -1;
-        Search search = new Search();
 
 
-        System.out.println(search.recursiveBinarySearch(array, target));
-   
+    // {11,12,13,14}        window size = 2;
+    // {11,12} , {12,13}, {13,14}
+
+    public void slidingWindow(int[] array, int windowSize){
+
+        List<Integer> nums = new ArrayList<>();
+     
+         int windowStart =0;
+
+         for(int windowEnd =0; windowEnd< array.length; windowEnd++ ){
+
+            nums.add(array[windowEnd]);
+
+            if(windowEnd - windowStart +1== windowSize){
+                System.out.println(nums.toString());
+                nums.remove(0);
+                windowStart++;
+            }
+         
+         }
+        
     }
+
+
+
+
 
     // divide and conquer
     public static void maxCrossArray(int[] array, int startPos) {
