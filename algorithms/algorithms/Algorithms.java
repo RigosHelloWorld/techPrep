@@ -15,6 +15,13 @@ public class Algorithms {
     // {11,12,13,14} window size = 2;
     // {11,12} , {12,13}, {13,14}
 
+    /**
+     * 
+     * function to demonstrate the sliding window algorithm takes an array and
+     * prints a certain windowsize to the console
+     * 
+     * EX. {1,2,2,4} windowSize =2 {1,2} {2,2} {2,4}
+     */
     public void slidingWindow(int[] array, int windowSize) {
 
         List<Integer> nums = new ArrayList<>();
@@ -47,20 +54,22 @@ public class Algorithms {
 
         for (int windowEnd = 0; windowEnd < array.length; windowEnd++) {
 
-           //{1 , 2 , 3, 4, }
+            // int[] arr = {1, 2, 3, 4, -2, 2, 7, 8, 9};
 
-           sum+= array[windowEnd];
-           nums.add(array[windowEnd]);
-           System.out.println(nums.toString());
+            sum += array[windowEnd];
+            nums.add(array[windowEnd]);
 
-           if(sum > target){
-               sum -= array[windowStart];
-               nums.remove(0);
-               windowStart++;
-           }
+            if (sum > target) {
+                sum -= array[windowStart];
+                nums.remove(0);
+                windowStart++;
+            }
 
-           if(sum == target){
-           }
+            if (sum == target) {
+                System.out.println(nums.toString());
+
+                count++;
+            }
 
         }
 
