@@ -49,7 +49,17 @@ public class Driver {
                  * In this example we have two loops the first loop iterates through the array (N) times with N being the size of our 
                  * clothing_items
                  * 
-                 * The secound loop iterates 
+                 * The secound loop iterates whatever value num_sizes is.
+                 * 
+                 * IN OUR choosen example num_sizes =5 
+                 * 
+                 * This never changes and means the inner loop iterates 5 times for every N String
+                 * 
+                 * so this means
+                 * 
+                 * O(5N) = O(N)
+                 * 
+                 * 
                  */
                 for(int i=0; i < clothing_items.length; i++){
 
