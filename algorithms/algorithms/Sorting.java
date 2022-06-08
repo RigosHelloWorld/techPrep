@@ -55,4 +55,51 @@ public class Sorting {
         if (DEBUGG){ System.out.println("After Swapping: " + Arrays.toString(array));}
 
     }
+
+
+    public void selectionSort(int[] nums){
+
+        for(int i=0; i < nums.length-1;i++){
+            int indexPosition = i;
+
+            for(int j=i+1; j < nums.length; j++){
+
+                if(nums[j] <  nums[indexPosition]){
+                    indexPosition = j;
+                }
+            }
+
+            if(nums[i] > nums[indexPosition]){
+                int temp = nums[indexPosition];//9
+                nums[indexPosition] = nums[i];//9
+                nums[i] = temp;//10
+            }
+                
+
+        }
+
+
+    }
+
+    public void insertionSort(int[] nums){
+
+
+        for(int i =1; i < nums.length;i++){
+
+            int key = nums[i];
+
+            int j = i-1;
+
+            while(j >= 0 && nums[j] > key){
+
+                nums[j+1] = nums[j];
+                j--;
+            }
+
+            nums[j+1] = key;
+            
+        }
+
+
+    }
 }

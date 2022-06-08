@@ -2,6 +2,8 @@ package algorithms;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Algorithms {
 
@@ -74,6 +76,30 @@ public class Algorithms {
         }
 
         return count;
+    }
+//hello 
+    public String reverseAStringUsingTwoPointers(String string){
+
+        System.out.println("String: " + string);
+
+        int start = 0;
+        int end = string.length()-1;
+        
+        char[] cArray = string.toCharArray();
+
+
+        while(start < end){
+            char temp = cArray[start];
+            cArray[start] = cArray[end];
+            cArray[end] = temp;
+            start++;
+            end--;
+        }
+
+    
+
+
+        return new String(cArray);
     }
 
 }

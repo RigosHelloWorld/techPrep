@@ -3,5 +3,9 @@
         "leetcode/JavaSolutions",
         "algorithms",
         ""
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/rigo/Downloads/json-simple-1.1.1.jar"
     ]
 }
