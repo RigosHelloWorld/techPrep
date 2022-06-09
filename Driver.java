@@ -26,15 +26,34 @@ import org.json.simple.parser.ParseException;
 public class Driver {
 
         public static void main(String[] args) {
+                int[] arr1 = {0,1,1,1,0};
+                int[] arr2 = {0,1,0,1,0,1};
+                int[] arr3 = {1,0};
+                List<int[]> list = new ArrayList<>(Arrays.asList(arr1,arr2,arr3));
 
-              String[] clothing = {"Purple Shirt","Green Shirt"};
+                
 
-              List<String> clothing_options =  mark_inventory(clothing);
+          
 
-              System.out.println(clothing_options.toString());
+
+               System.out.println(count_the_ones(list));
 
 
         }// end of main function
+
+
+        public static int count_the_ones(List<int[]> list){
+
+                int num_ones =0;
+                for(int i=0; i < list.size();i++){
+                        for(int num: list.get(i)){
+                                if(num == 1) num_ones++;
+                        }
+                }
+
+                return num_ones;
+        }
+         
 
         public static List<String> mark_inventory(final String[] clothing_items){
 
@@ -53,7 +72,7 @@ public class Driver {
                  * 
                  * IN OUR choosen example num_sizes =5 
                  * 
-                 * This never changes and means the inner loop iterates 5 times for every N String
+                 * This never changes and means the inner loop iterates 5 times for every N Strings
                  * 
                  * so this means
                  * 
@@ -61,6 +80,7 @@ public class Driver {
                  * 
                  * 
                  */
+
                 for(int i=0; i < clothing_items.length; i++){
 
                         for(int j =0; j < num_sizes; j++){
