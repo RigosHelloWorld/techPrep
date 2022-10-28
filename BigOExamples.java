@@ -7,62 +7,25 @@ class BigOExamples {
     private BigOExamples() {
     };
 
-    public static boolean find_needle(String needle, String hayStack){
-
-        boolean isFound = false;
-        if(hayStack.indexOf(needle, 0) ==1) return true;
-        return isFound;
-    }
-
-    public static List<String> passwordCracker(int n ){
-        List<String> list = new ArrayList<>();
-        int alphabetSize = 26;
-        for (int i=0; i < n; i++) {
-            for (int j =0 ; j < alphabetSize;j++) {
-            list.add(j,Character.toString((char)'a'+j));
-            }
-        }
-        return list;
-    }
-
-
-
-    public static boolean isPalindrome(String word){
-        if(word.isEmpty()) return false;
-        if(word.length() ==1) return true;
-        for(int i=0, j = word.length()-1   ; i < word.length()/2 ; i++,j--){
-            if(word.charAt(i) != word.charAt(j)) return false;
-        }
-        return true;
-    }
-
     public static int count_the_ones(List<int[]> list) {
-        /**
-         * BigO Notation:
-         * 
-         * The outer loop is iterating over the inner arrays 
-         * The inner loop is iterating over the actual numbers. 
-         * 
-         * Our inner loop only runs FOR AS MANY numbers as there are total. 
-         * 
-         * So we can say (N) represent how many numbers there are. 
-         * 
-         * and since the algorithm simply processes each number we can say 
-         * 
-         * O(N)
-         */
+
         int num_ones = 0;
-        for(int[] innerArrays : list) {
-            for(int num: innerArrays) {
-                if (num == 1) num_ones++;
+        for (int i = 0; i < list.size(); i++) {
+            for (int num : list.get(i)) {
+                if (num == 1)
+                    num_ones++;
             }
         }
+
         return num_ones;
     }
 
     public static List<String> mark_inventory(final String[] clothing_items) {
+
         int num_sizes = 5;
+
         List<String> clothing_options = new ArrayList<>();
+
         /**
          * BigO Notation:
          * 
@@ -82,17 +45,24 @@ class BigOExamples {
          * 
          * 
          */
+
         for (int i = 0; i < clothing_items.length; i++) {
+
             for (int j = 0; j < num_sizes; j++) {
                 clothing_options.add(clothing_items[i] + " Size " + (j + 1));
             }
         }
+
         return clothing_options;
+
     }
 
     public static double average_celsius(int[] fahrenheit_readings) {
+
         double[] celsius_readings = new double[fahrenheit_readings.length];
+
         int index = 0;
+
         /**
          * BigO Notation: In this example we have two loops: The first loop iterates
          * through (N) elements in our fahrenheit array it then converts each element
@@ -114,6 +84,7 @@ class BigOExamples {
             celsius_readings[index] = (num - 32) / 1.8;
             index++;
         }
+
         double sum = 0;
         for (double num : celsius_readings) {
             sum += num;
@@ -123,7 +94,9 @@ class BigOExamples {
     }
 
     public static List<String> wordBuilder(String characters[]) {
+
         List<String> list = new ArrayList<>();
+
         /**
          * BigO Notation: We determined that N data elements is the string of characters
          * that we passed into the function The first loop iterates through the array N
@@ -139,12 +112,15 @@ class BigOExamples {
                 }
             }
         }
+
         return list;
     }
 
     public static double average_of_evan_num(int nums[]) {
+
         int sum = 0;
         int count_of_evan_nums = 0;
+
         /**
          * BigO notation: we loop through n elements with n being the size of the array
          * if the number is evan then we perform 2 additional steps for a total of 3
@@ -160,6 +136,8 @@ class BigOExamples {
                 count_of_evan_nums++;
             }
         }
+
         return sum / count_of_evan_nums;
     }
+
 }
