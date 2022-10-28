@@ -2,16 +2,12 @@ package algorithms;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-
 public class Algorithms {
 
-    private List<List<Integer>> list;
 
     // constructor
     public Algorithms() {
-        list = new ArrayList<>();
+       
     };
 
     // {11,12,13,14} window size = 2;
