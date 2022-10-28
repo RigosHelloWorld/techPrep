@@ -3,10 +3,8 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 
 //Implentation of a dynamic stack
-public class Stack {
-    private ArrayList<Integer> list = null;
-
-
+public class Stack <T>{
+    private ArrayList<T> list = null;
 
     //create a new stack using an arraylist as a container
     public Stack(){
@@ -19,7 +17,7 @@ public class Stack {
      * @param val the value we want to add to the stack
      * @return the value that we just added to the stack
      */
-    public int push(int val){
+    public T push(T val){
         list.add(val);
         return val;
     }
@@ -27,16 +25,17 @@ public class Stack {
     /**
      * 
      * @return value removed from the top or -1 if stack is empty along with consoleMsg: StackEmptyException
+     * @throws EmptyStackException 
      */
-    public int pop(){
+    public T pop() {
         
         if(!list.isEmpty()){
-            int val = list.get(list.size()-1);
+            T val = list.get(list.size()-1);
             list.remove(list.size()-1);
             return val;
         }
         else{
-           return error();
+           throw new EmptyStackException();
         }
         
     }
@@ -45,13 +44,12 @@ public class Stack {
      * 
      * @return the value at the top of the stack or -1 if stack is empty along with consoleMsg: StackEmptyException
      */
-    public int peek(){
+    public T peek() {
 
         if(!list.isEmpty()){
             return list.get(list.size()-1);
         }else{
-            return error();
-            
+            throw new EmptyStackException();
         }
     }
 
@@ -69,7 +67,7 @@ public class Stack {
      * @param val value to search for
      * @return the position of the value found starting from the top of the stack. The top is considered 1 
      */
-    public int search(int val){
+    public int search(T val){
 
         if(!list.isEmpty()){
             int pos =1;
@@ -80,13 +78,6 @@ public class Stack {
             }
         }
 
-        return -1;
-    }
-    
-
-    //Simple error msg 
-    public int error(){
-        System.out.println("EmptyStackException:");
-        return -1;
+        throw new EmptyStackException();
     }
 }
