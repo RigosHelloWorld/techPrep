@@ -5,7 +5,6 @@ import java.util.StringTokenizer;
 public class Leetcode824 {
     public static String toGoatLatin(String sentence) {
         StringTokenizer tokenz = new StringTokenizer(sentence);
-        String[] str = sentence.split(" ");
         StringBuilder sentenceRevised = new StringBuilder();
         int count = 0;
         while(tokenz.hasMoreTokens()) {
